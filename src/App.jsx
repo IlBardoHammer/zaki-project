@@ -1,12 +1,13 @@
 import "/src/styles/main.scss"
+import Header from "./component/Header.jsx";
+
 
 function App() {
-
   return (
-    <>
-      <h1 className="title">Zaki APP</h1>
-    </>
+    <section className="home">
+      <Header/>
+    </section>
   )
 }
 
-export default App
+export default App;
