@@ -1,4 +1,4 @@
-import '../styles/scss/Header.scss';
+import '../styles/components/Header.scss';
 import Button from "./Button.jsx";
 import iconChevronDown from "../assets/icon/ChevronDown.png";
 import iconSearch from "../assets/icon/Search.png";

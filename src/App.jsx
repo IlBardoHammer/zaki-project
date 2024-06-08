@@ -1,7 +1,10 @@
-import "/src/styles/main.scss"
-import Header from "./component/Header.jsx";
+import "/src/styles/main.scss";
+import Header from "./components/Header.jsx";
 import img from "./assets/imgHome.jpg";
-import Button from "./component/Button.jsx";
+import Button from "./components/Button.jsx";
+import Card from "./components/Card.jsx";
+import iconChevronRight from "./assets/icon/ChevronRight.png";
+
 
 const App = () => {
   return (
@@ -20,10 +23,21 @@ const App = () => {
               quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea  commodo consequat.</p>
             <Button variant="primary">Discover more</Button>
           </div>
+        </section>
+        <section className="home__solution">
+          <div className="home__solution-head">
+            <h2 className="home__solution-title">Our solutions</h2>
+            <Button variant="primary" iconPosition="after" icon={iconChevronRight}>See all</Button>
+          </div>
+          <div className="home__solution-container">
+            <Card/>
+            <Card/>
+            <Card/>
+            <Card/>
+          </div>
 
         </section>
       </section>
-
     </>
   )
 }
