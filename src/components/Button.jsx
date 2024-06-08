@@ -2,22 +2,25 @@ import '../styles/components/Button.scss';
 
 import '../styles/components/Button.scss';
 
-const Button = ({ children, variant, icon, size, iconPosition, iconSize, className, textColor }) => {
-  const iconClass = variant === 'primary' ? 'button__icon--white' : 'button__icon--gray';
-  const textClass = textColor === 'white' ? 'button__color--white' : 'button__color--dark';
+const Button = ({ children, variant, icon, size, iconPosition, iconSize, className, altColor, iconColor }) => {
+  const iconClassColor = iconColor === 'white' ? 'button__icon--white' : iconColor === 'grey' ? 'button__icon--gray' : '';
   const sizeClass = size === 'small' ? 'button__small' : '';
-  const iconSizeClass = `button__icon--${ iconSize }`;
+  const iconSizeClass = `button__icon--${iconSize}`;
 
-  const buttonClass = `button ${variant} ${sizeClass} ${textClass} ${className}`;
+  // Applica la classe per il colore alternativo solo se `variant` è 'alt'
+  const altTextClass = variant === 'alt' && altColor === 'white' ? 'button__alt-color--white' : variant === 'alt' && altColor === 'dark-grey' ? 'button__alt-color--dark-grey' : '';
+
+  const buttonClass = `button ${variant} ${sizeClass} ${altTextClass} ${className || ''}`.trim();
+
   return (
     <button className={buttonClass}>
-      { icon && iconPosition === 'before' && (
-        <img src={ icon } alt="" className={ `button__icon ${ iconClass } ${ iconSizeClass } button__icon--before` }/>
-      ) }
-      { children }
-      { icon && iconPosition === 'after' && (
-        <img src={ icon } alt="" className={ `button__icon ${ iconClass } ${ iconSizeClass } button__icon--after` }/>
-      ) }
+      {icon && iconPosition === 'before' && (
+        <img src={icon} alt="" className={`button__icon  ${iconClassColor} ${iconSizeClass} button__icon--before`} />
+      )}
+      {children}
+      {icon && iconPosition === 'after' && (
+        <img src={icon} alt="" className={`button__icon  ${iconClassColor} ${iconSizeClass} button__icon--after`} />
+      )}
     </button>
   );
 };

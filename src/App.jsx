@@ -4,6 +4,7 @@ import img from "./assets/imgHome.jpg";
 import Button from "./components/Button.jsx";
 import Card from "./components/Card.jsx";
 import iconChevronRight from "./assets/icon/ChevronRight.png";
+import SectionCards from "./components/SectionCards.jsx";
 
 
 const App = () => {
@@ -24,19 +25,7 @@ const App = () => {
             <Button variant="primary">Discover more</Button>
           </div>
         </section>
-        <section className="home__solution">
-          <div className="home__solution-head">
-            <h2 className="home__solution-title">Our solutions</h2>
-            <Button variant="primary" iconPosition="after" icon={iconChevronRight}>See all</Button>
-          </div>
-          <div className="home__solution-container">
-            <Card/>
-            <Card/>
-            <Card/>
-            <Card/>
-          </div>
-
-        </section>
+        <SectionCards theme="accent"/>
       </section>
     </>
   )

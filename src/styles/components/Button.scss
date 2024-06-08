@@ -21,7 +21,6 @@
 
   &.alt {
     background-color: transparent;
-    color: $dark;
 
     &:hover {
       background-color: $accent-light;
@@ -47,12 +46,21 @@
     padding: 4px 8px;
     font-size: 12px;
   }
+
   &__color--white {
     color: white;
   }
 
   &__color--dark {
     color: $dark;
+  }
+
+  &__alt-color--white {
+    color: white;
+  }
+
+  &__alt-color--dark-grey {
+    color: $dark-grey;
   }
 
 

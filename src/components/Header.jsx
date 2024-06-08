@@ -14,7 +14,7 @@ const Header = () => {
         <Button variant="alt" icon={ iconChevronDown } iconPosition="after">Resources</Button>
         <Button variant="alt">Contacts</Button>
       </nav>
-      <Button variant="primary" icon={ iconSearch } iconPosition="after">Search</Button>
+      <Button variant="primary" icon={ iconSearch } iconPosition="after" iconColor="white">Search</Button>
     </header>
   )
 
