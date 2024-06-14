@@ -2,9 +2,9 @@ import '../styles/components/Button.scss';
 
 import '../styles/components/Button.scss';
 
-const Button = ({ children, variant, icon, size, iconPosition, iconSize, className, altColor, iconColor }) => {
-  const iconClassColor = iconColor === 'white' ? 'button__icon--white' : iconColor === 'grey' ? 'button__icon--gray' : '';
-  const sizeClass = size === 'small' ? 'button__small' : '';
+const Button = ({ children, variant, icon, buttonSize, iconPosition, iconSize, className, altColor, iconColor }) => {
+  const iconClassColor = iconColor === 'white' ? 'button__icon--white' : iconColor === 'grey' ? 'button__icon--gray' : iconColor === 'accent' ? 'button__icon--accent' : '';
+  const sizeClass = buttonSize === 'small' ? 'button__small' : '';
   const iconSizeClass = `button__icon--${iconSize}`;
 
   // Applica la classe per il colore alternativo solo se `variant` è 'alt'

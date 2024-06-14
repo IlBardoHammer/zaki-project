@@ -85,6 +85,10 @@
       filter: brightness(0) invert(0.4);
     }
 
+    &--accent {
+      filter: invert(24%) sepia(91%) saturate(3746%) hue-rotate(333deg) brightness(96%) contrast(98%);
+    }
+
     &--xs {
       width: $icon-size-xs;
       height: $icon-size-xs;

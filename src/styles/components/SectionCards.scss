@@ -5,6 +5,7 @@
   @include flex-column;
   margin-top: 100px;
   width: 90%;
+  margin-bottom: 75px;
   max-width: 1100px;
   height: 460px;
   padding: 0 55px;
@@ -35,10 +36,6 @@
   &__container {
     @include flex-row;
     gap: 10px;
-
-
   }
-
-
 }
 
