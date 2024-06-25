@@ -10,7 +10,7 @@ const Card = ({ color, children }) => {
       <h4 className="card__title">Title card here</h4>
       <p className="card__p">{ children }</p>
       <Button variant="primary" buttonSize="small" icon={ iconChevronRight } iconPosition="after" iconSize="xs"
-              textColor="white" className="card__button" iconColor="white">Discover</Button>
+               className="card__button" iconColor="white">Discover</Button>
     </section>
   )
 }

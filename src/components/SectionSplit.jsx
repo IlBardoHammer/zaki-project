@@ -1,9 +1,8 @@
 import '../styles/components/SectionSplit.scss';
 import img from "../assets/imgHome.jpg";
-import arrow from "../assets/icon/ArrowRight.png";
 import Button from "./Button.jsx";
 
-const SectionSplit = ({ layout = 'default', span, title, buttonText}) => {
+const SectionSplit = ({ layout = 'default', span, title, buttonText, variantButton, iconButton, iconPosition}) => {
   const sectionClass = `section-split section-split--${layout}`;
   const imageClass = `section-split__image ${layout === 'default' ? '' : 'section-split__image--square'}`;
   const contentClass = `section-split__content`;
@@ -21,7 +20,7 @@ const SectionSplit = ({ layout = 'default', span, title, buttonText}) => {
           Ut enim ad minim veniam,
           quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
         </p>
-        <Button variant="alt" className={buttonClass} icon={arrow} iconColor="accent" iconPosition="before">{buttonText}</Button>
+        <Button variant={ variantButton } className={buttonClass} icon={iconButton} iconColor="accent" iconPosition={ iconPosition }>{buttonText}</Button>
       </div>
     </section>
   );

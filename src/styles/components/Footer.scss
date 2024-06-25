@@ -1,0 +1,33 @@
+@import '../variables';
+@import '../main';
+
+
+.footer {
+  @include flex-column;
+  width: 100%;
+  height: 300px;
+  background-color: $light-grey;
+
+  &__row {
+    @include flex-row;
+    justify-content: space-between;
+    width: 90%;
+  }
+
+  &__button-container {
+    @include flex-row;
+  }
+
+  &__logo {
+    color: $dark;
+    font-size:$display-m-font-size;
+  }
+
+  &__span {
+    align-self: flex-start;
+    margin-top: 95px;
+    margin-left: 78px;
+    font-size: $body-s-font-size;
+    color: $dark-grey;
+  }
+}

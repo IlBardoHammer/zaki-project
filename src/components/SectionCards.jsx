@@ -3,7 +3,7 @@ import iconChevronRight from "../assets/icon/ChevronRight.png";
 import Card from "./Card.jsx";
 import '../styles/components/SectionCards.scss';
 
-const SectionCards = ({ theme }) => {
+const SectionCards = ({ theme, title }) => {
   const themeClass = theme === 'dark'
     ? 'sectionCards__theme-dark'
     : theme === 'accent'
@@ -12,7 +12,7 @@ const SectionCards = ({ theme }) => {
   return (
     <section className={ `sectionCards ${ themeClass }` }>
       <div className="sectionCards__head">
-        <h2 className="sectionCards__title">Our solutions</h2>
+        <h2 className="sectionCards__title">{ title }</h2>
         <Button variant="alt" iconPosition="after" icon={ iconChevronRight } textColor="white" altColor="white"
                 iconColor="white">See all</Button>
       </div>
