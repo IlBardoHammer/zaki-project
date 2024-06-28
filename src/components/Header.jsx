@@ -5,28 +5,41 @@ import iconChevronUp from "../assets/icon/ChevronUp.png"; // Assicurati di avere
 
 import iconSearch from "../assets/icon/Search.png";
 import { useState } from "react";
-import Megamenu from "./Megamenu.jsx";
+import MegamenuResources from "./MegamenuResources.jsx";
+import MegamenuSolutions from "./MegamenuSolutions.jsx";
 
 const Header = () => {
-  const [ isMegaMenuOpen, setMegaMenuOpen ] = useState(false);
+  const [ isSolutionsMenuOpen, setSolutionsMenuOpen ] = useState(false);
+  const [ isResourcesMenuOpen, setResourcesMenuOpen ] = useState(false);
 
-  const toggleMegaMenu = () => {
-    setMegaMenuOpen( !isMegaMenuOpen);
+  const toggleSolutionsMenu = () => {
+    setSolutionsMenuOpen( !isSolutionsMenuOpen);
+    if ( isResourcesMenuOpen ) setResourcesMenuOpen(false);
   };
+
+  const toggleResourcesMenu = () => {
+    setResourcesMenuOpen( !isResourcesMenuOpen);
+    if ( isSolutionsMenuOpen ) setSolutionsMenuOpen(false); // Chiude l'altro menu se aperto
+  };
+
   return (
     <>
       <header className="header">
         <h2 className="header__logo">logo</h2>
         <nav className="header__menu-container">
-          <Button onClick={ toggleMegaMenu } variant="alt" icon={isMegaMenuOpen ? iconChevronUp : iconChevronDown}
+          <Button onClick={ toggleSolutionsMenu } variant="alt"
+                  icon={ isSolutionsMenuOpen ? iconChevronUp : iconChevronDown }
                   iconPosition="after">Solutions</Button>
           <Button variant="alt">About Us</Button>
-          <Button variant="alt" icon={ iconChevronDown } iconPosition="after">Resources</Button>
+          <Button onClick={ toggleResourcesMenu } variant="alt"
+                  icon={ isResourcesMenuOpen ? iconChevronUp : iconChevronDown }
+                  iconPosition="after">Resources</Button>
           <Button variant="alt">Contacts</Button>
         </nav>
         <Button variant="primary" icon={ iconSearch } iconPosition="after" iconColor="white">Search</Button>
       </header>
-      { isMegaMenuOpen && <Megamenu/> }
+      { isSolutionsMenuOpen && <MegamenuSolutions/> }
+      { isResourcesMenuOpen && <MegamenuResources/> }
     </>
 
   )

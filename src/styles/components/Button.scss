@@ -23,8 +23,12 @@
     background-color: transparent;
 
     &:hover {
-      background-color: $accent-light;
+      color: $accent;
+      .button__icon {
+        filter: invert(24%) sepia(91%) saturate(3746%) hue-rotate(333deg) brightness(96%) contrast(98%);
+      }
     }
+
   }
 
   &.secondary {
@@ -88,6 +92,7 @@
     &--accent {
       filter: invert(24%) sepia(91%) saturate(3746%) hue-rotate(333deg) brightness(96%) contrast(98%);
     }
+
   }
 }
 
