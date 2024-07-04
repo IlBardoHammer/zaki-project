@@ -14,16 +14,28 @@
 
   &__logo {
     color: $dark;
-    font-size:$display-m-font-size;
+    font-size: $display-m-font-size;
   }
 
   &__menu-container {
     @include flex-row;
+    justify-content: space-between;
     gap: 10px;
     width: 520px;
     height: 50px;
     background-color: $light-grey;
     border-radius: $radius-xxl;
+  }
+
+  &__input {
+    margin-left: 230px;
+    border: none;
+    background-color: $light-grey;
+    color: $dark-grey;
+  }
+
+  &__input:focus {
+    outline: none;
   }
 }
 

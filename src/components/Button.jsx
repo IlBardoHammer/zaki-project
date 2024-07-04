@@ -10,7 +10,7 @@ const Button = ({ children, variant, icon, buttonSize, iconPosition, iconSize, c
   // Applica la classe per il colore alternativo solo se `variant` è 'alt'
   const altTextClass = variant === 'alt' && altColor === 'white' ? 'button__alt-color--white' : variant === 'alt' && altColor === 'dark-grey' ? 'button__alt-color--dark-grey' : '';
 
-  const buttonClass = `button ${variant} ${sizeClass} ${altTextClass} ${className || ''}`.trim();
+  const buttonClass = `button ${variant} ${sizeClass} ${altTextClass} ${className || ''}`;
 
   return (
     <button className={buttonClass} onClick={onClick}>

@@ -2,11 +2,11 @@ import '../styles/components/Card.scss';
 import Button from "./Button.jsx";
 import iconChevronRight from "../assets/icon/ChevronRight.png";
 
-const Card = ({ color, children, img }) => {
+const Card = ({ color, children, img, position }) => {
   const cardColor = color === 'grey' ? 'card__grey' : '';
 
   const hasText = children !== undefined && children !== null;
-  const cardClass = `card ${cardColor} ${hasText ? '' : 'card__no-text'}`;
+  const cardClass = `card ${cardColor} ${hasText ? '' : 'card__no-text'} ${position ? position : ''}`;
 
   return (
     <section className={cardClass}>
@@ -18,7 +18,7 @@ const Card = ({ color, children, img }) => {
         buttonSize="small"
         icon={iconChevronRight}
         iconPosition="after"
-        iconSize="xs"
+        iconSize="small"
         className="card__button"
         iconColor="white"
       >

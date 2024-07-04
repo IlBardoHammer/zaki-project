@@ -24,6 +24,7 @@
 
     &:hover {
       color: $accent;
+
       .button__icon {
         filter: invert(24%) sepia(91%) saturate(3746%) hue-rotate(333deg) brightness(96%) contrast(98%);
       }
@@ -71,6 +72,11 @@
   &__icon {
     width: 16px;
     height: 16px;
+
+    &--small {
+      width: 12px;
+      height: 12px;
+    }
 
     &--before {
       margin-right: 8px;

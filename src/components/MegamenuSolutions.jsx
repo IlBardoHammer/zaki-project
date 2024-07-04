@@ -47,6 +47,17 @@ const MegamenuResources = () => {
             <h2>Latest from the blog</h2>
             <Button variant="alt" iconPosition="after" icon={ iconChevronRight } buttonSize="small">See all</Button>
           </div>
+          <div className="megamenu__row-cards">
+            <Card position="megamenu__cards" color="grey" img={ defaultImg }>
+              Lorem ipsum dolor sit amet adipiscit arisma alus nacumi so anum arimeto remuscit alumni
+            </Card>
+            <Card position="megamenu__cards" color="grey" img={ defaultImg }>
+              Lorem ipsum dolor sit amet adipiscit arisma alus nacumi so anum arimeto remuscit alumni
+            </Card>
+            <Card position="megamenu__cards" color="grey" img={ defaultImg }>
+              Lorem ipsum dolor sit amet adipiscit arisma alus nacumi so anum arimeto remuscit alumni
+            </Card>
+          </div>
         </div>
 
       </div>

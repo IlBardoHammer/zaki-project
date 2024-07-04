@@ -1,39 +1,27 @@
 @import '../variables';
 @import '../main';
 
-.megamenu {
+
+.opensearch {
   @include flex-row;
   width: 1100px;
   position: fixed;
   top: 120px;
   bottom: 0;
-  overflow-y: scroll;
   background-color: $white;
   border-radius: $radius-l;
-  height: 100vh;
+  overflow-y: scroll;
   z-index: 1;
 
   &::-webkit-scrollbar {
     display: none;
   }
 
-
-  &__sidebar {
-    @include flex-column;
-    margin-top: 80px;
-    justify-content: flex-start;
-    align-items: flex-start;
-    margin-left: 50px;
-    gap: 30px;
-    width: 20%;
-    height: 100vh;
-  }
-
   &__content {
     @include flex-column;
-    width: 80%;
-    height: 100vh;
-    gap: 30px;
+    width: 100%;
+    height: 100%;
+    gap: 50px;
     margin-top: 68px;
     justify-content: flex-start;
   }
@@ -55,11 +43,6 @@
     gap: 20px;
   }
 
-  &__cards  {
-    margin-bottom: 160px;
-  }
-
-
   &__img {
     width: $icon-size-m;
     height: $icon-size-m;
@@ -71,5 +54,11 @@
   &__p {
     color: $dark-grey;
     font-size: $body-s-font-size;
+  }
+
+  &__row-tiny  {
+    @include flex-row;
+    width: 100%;
+    gap: 15px;
   }
 }
